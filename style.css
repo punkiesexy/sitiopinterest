@@ -1,0 +1,127 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-size: 1.8rem;
+    background-color: #d68197ff;
+}
+
+header {
+    text-align: center;
+}
+
+main > header {
+    background-color: #9f78e6c7;
+
+}
+
+h1 {
+    color:#011515;
+    font-size: 30px;
+    font-size:3rem;
+    -webkit-column-span:all;
+    -moz-column-span:all;
+    column-span:all;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(25, 2, 2);
+}
+
+#galeria {
+    margin: 1rem auto;
+    width:100%;
+    max-width:960px;
+    padding:0 20px 20px;
+    box-sizing: border-box;
+    column-count: 3;
+
+    /* Espacio entre columnas */
+    -moz-column-gap: 20px;
+    -webkit-column-gap: 20px;
+    column-gap: 20px;
+    
+}
+
+article {
+    background:rgb(181, 172, 172);
+    border-radius:5px;
+    border:1px solid rgb(220, 164, 164);
+    margin:0 0 20px 0;
+    text-align: center;
+    max-width: 100%;
+    filter: opacity(70%);
+}
+
+article img {
+    width:100%;
+}
+
+article:hover {
+    transition: .5s ease;
+    filter: opacity(100%);
+}
+
+figure {
+    padding:1rem;
+    box-sizing: border-box;
+}
+
+
+/* Móviles en horizontal o tablets en vertical */
+@media (max-width: 767px) { 
+    #galeria {
+        columns:2;
+    }
+
+}
+
+/* Móviles en vertical */
+
+@media (max-width: 480px) {
+    #galeria {
+        columns: 1;
+    }
+}
+
+.social {
+	position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+	left: 0; /* Establecemos la barra en la izquierda */
+	top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+	z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+	.social ul {
+		list-style: none;
+	}
+
+	.social ul li a {
+		display: inline-block;
+		color:#fff;
+		background: #000;
+		padding: 10px 15px;
+		text-decoration: none;
+		-webkit-transition:all 500ms ease;
+		-o-transition:all 500ms ease;
+		transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+	}
+
+	 /* Establecemos los colores de cada red social, aprovechando su class */
+	.social ul li .icon-twitter {background: #00abf0;}
+	.social ul li .icon-googleplus {background: #d95232;}
+	.social ul li .icon-pinterest {background: #ae181f; width:1px; height: 1px;}
+	
+
+	.social ul li a:hover {
+		background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+		padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+	}
